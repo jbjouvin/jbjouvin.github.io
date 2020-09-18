@@ -1,6 +1,5 @@
 +++
-date = "1009-01-01"
-title = "GiTips "
+title = "GiTips 👨‍💻"
 description = "Handling two Git accounts"
 +++
 

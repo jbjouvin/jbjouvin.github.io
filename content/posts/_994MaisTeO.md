@@ -1,7 +1,6 @@
 +++
-date = "1009-01-01"
-title = "MaisTéO "
-description = "Where are "
+title = "MaisTéO 👔"
+description = "where are u ?"
 +++
 
 # `MaisTéO`

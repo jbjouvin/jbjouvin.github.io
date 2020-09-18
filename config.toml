@@ -1,60 +1,57 @@
-baseurl = "https://jbjouvin.gitlab.io"
+baseurl = "https://jbjouvin.gitlab.io/jb"
 title = "jb"
 languagecode = "en"
 defaultcontentlanguage = "en"
-
 paginate = 20
 canonifyurls = true
-
 pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "yourdiscussshortname"
-
 [params]
-    author = "JB"
-    info = "common guy"
-    description = "JB website"
-    keywords = "blog,developer,personal"
-    avatarurl = "images/jb.jpg"
-
-    favicon_32 = "/img/favicon-32x32.png"
-    favicon_16 = "/img/favicon-16x16.png"
-
-    footercontent = "Why do we fall ? So we can learn to pick ourselves up"
-
-    hidecredits = true
-    hidecopyright = true
-
-    rtl = false
-
-    math = true
-    colorscheme = "dark"
-    enableTwemoji = true
+author = "JB"
+info = "common guy"
+description = "JB website"
+keywords = "blog,developer,personal"
+avatarurl = "images/jb.jpg"
+footercontent = "Why do we fall ? So we can learn to pick ourselves up"
+hidecredits = true
+hidecopyright = true
+rtl = false
+math = true
+colorscheme = "dark"
+enableTwemoji = true
 
 # Social links
 [[params.social]]
-    name = "Github"
-    icon = "fab fa-github fa-2x"
-    weight = 1
-    url = "https://github.com/jbjouvin"
+name = "Github"
+icon = "fab fa-github fa-2x"
+weight = 1
+url = "https://github.com/jbjouvin"
+
 [[params.social]]
-    name = "Gitlab"
-    icon = "fab fa-gitlab fa-2x"
-    weight = 2
-    url = "https://gitlab.com/jbjouvin"
+name = "Gitlab"
+icon = "fab fa-gitlab fa-2x"
+weight = 2
+url = "https://gitlab.com/jbjouvin"
 
 # Menu links
 [[menu.main]]
-    name = "blog"
-    weight = 1
-    url  = "/posts/"
+name = "blog"
+weight = 1
+url = "/posts/"
+
 [[menu.main]]
-    name = "cheat-sheets"
-    weight = 2
-    url = "/cheat-sheets/"
+name = "cheat-sheets"
+weight = 2
+url = "/cheat-sheets/"
+
 [[menu.main]]
-    name = "Stracraft II"
-    weight = 3
-    url = "/sc2tips/"
+name = "Stracraft II"
+weight = 3
+url = "/sc2tips/"
+
+[[menu.main]]
+name = "Resume"
+weight = 3
+url = "/resume/"
