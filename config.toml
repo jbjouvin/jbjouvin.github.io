@@ -35,6 +35,13 @@ icon = "fab fa-gitlab fa-2x"
 weight = 2
 url = "https://gitlab.com/jbjouvin"
 
+
+[[params.social]]
+name = "Gitlab"
+icon = "fab fa-linkedin fa-2x"
+weight = 2
+url = "https://fr.linkedin.com/in/jean-baptiste-jouvin-35773258"
+
 # Menu links
 [[menu.main]]
 name = "blog"
