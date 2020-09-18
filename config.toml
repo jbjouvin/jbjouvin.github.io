@@ -1,4 +1,4 @@
-baseurl = "http://www.example.com"
+baseurl = "https://jbjouvin.gitlab.io"
 title = "jb"
 languagecode = "en"
 defaultcontentlanguage = "en"
@@ -30,7 +30,6 @@ disqusShortname = "yourdiscussshortname"
     rtl = false
 
     math = true
-    custom_css = ["css/custom.css"]
     colorscheme = "dark"
     enableTwemoji = true
 
