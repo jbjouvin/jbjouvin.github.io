@@ -1,3 +1,9 @@
++++
+date = "1979-01-01"
+title = "byobu"
+description = "byobu"
++++
+
 Byobu is a suite of enhancements to tmux, as a command line
 tool providing live system status, dynamic window management,
 and some convenient keybindings:
