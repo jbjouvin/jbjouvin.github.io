@@ -1,8 +1,7 @@
 +++
-type = "shell"
 title = "byobu"
 description = "cheat-sheet"
-slug = "fas fa-terminal"
+type ="fas fa-terminal"
 +++
 
 # What ?

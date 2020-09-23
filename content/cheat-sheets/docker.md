@@ -2,9 +2,10 @@
 date = "1979-01-01"
 title = "docker"
 description = "docker"
-slug = "fab fa-docker"
+type ="fab fa-docker"
 +++
 
+[Everything](https://github.com/wsargent/docker-cheat-sheet)
 
 <h2 id=Docker>Docker
 <img src="https://www.docker.com/sites/default/files/social/docker_facebook_share.png" height="100" width="100" align="right">

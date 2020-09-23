@@ -2,7 +2,7 @@
 date = "1979-01-01"
 title = "git"
 description = "git"
-slug = "fab fa-git-alt"
+type ="fab fa-git-alt"
 +++
 
 

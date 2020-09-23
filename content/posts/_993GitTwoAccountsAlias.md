@@ -1,6 +1,7 @@
 +++
 title = "GiTips 👨‍💻"
 description = "Handling two Git accounts"
+date = "2019-05-09"
 +++
 
 Hello,

@@ -2,7 +2,7 @@
 date = "1979-01-01"
 title = "vscode"
 description = "vscode"
-slug = "fas fa-code" 
+type ="fas fa-code" 
 +++
 
 
