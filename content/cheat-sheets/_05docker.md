@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "docker"
 description = "docker"
+slug = "fab fa-docker"
 +++
 
 

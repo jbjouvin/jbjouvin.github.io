@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "ansible"
 description = "ansible"
+slug = "fas fa-robot"
 +++
 
 

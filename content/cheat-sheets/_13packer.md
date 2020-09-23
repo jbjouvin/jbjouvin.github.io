@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "packer"
 description = "packer"
+slug = "fas fa-cloud"
 +++
 
 

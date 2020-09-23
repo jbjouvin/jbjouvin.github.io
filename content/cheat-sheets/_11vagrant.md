@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "vagrant"
 description = "vagrant"
+slug = "fas fa-robot"
 +++
 
 

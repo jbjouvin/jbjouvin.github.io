@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "terraform"
 description = "terraform"
+slug = "fas fa-cloud"
 +++
 
 

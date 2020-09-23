@@ -1,13 +1,17 @@
 +++
-date = "1979-01-01"
+type = "shell"
 title = "byobu"
-description = "byobu"
+description = "cheat-sheet"
+slug = "fas fa-terminal"
 +++
 
+# What ?
 Byobu is a suite of enhancements to tmux, as a command line
 tool providing live system status, dynamic window management,
 and some convenient keybindings:
 
+# sheet
+```
   F1                             * Used by X11 *
     Shift-F1                     Display this help
   F2                             Create a new window
@@ -52,8 +56,7 @@ and some convenient keybindings:
     Shift-F12                    Toggle on/off Byobu's keybindings
     Alt-F12                      Toggle on/off Byobu's mouse support
     Ctrl-Shift-F12               Mondrian squares
-    
-/usr/share/doc/byobu/help.tmux.txt (END)
+```    
 
 official site:
 http://byobu.co

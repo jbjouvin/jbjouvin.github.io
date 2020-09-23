@@ -1,8 +1,9 @@
 +++ 
 date = "1979-01-01"
 title = "python"
-description = "python"
+description = "Some Python links"
 slug = "fab fa-python"
+type = "dev"
 +++
 
 <h2 id=Python>Python

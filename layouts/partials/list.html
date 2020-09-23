@@ -11,7 +11,7 @@
   <ul>
     {{ range .Paginator.Pages }}
     <li>
-      <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
+      <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}"><i class={{ .Slug }} ></i> {{ .Title }}</a>
     </li>
     {{ end }}
   </ul>

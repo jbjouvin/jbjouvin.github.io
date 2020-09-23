@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "nginx"
 description = "nginx"
+slug = "fas fa-server"
 +++
 
 <h2 id=Nginx>Nginx

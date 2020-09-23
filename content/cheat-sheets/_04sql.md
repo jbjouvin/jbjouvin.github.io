@@ -2,6 +2,7 @@
 date = "1979-01-01"
 title = "sql"
 description = "sql"
+slug = "fas fa-database"
 +++
 
 
