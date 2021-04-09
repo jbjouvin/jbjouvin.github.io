@@ -37,7 +37,7 @@ description = "Config"
 ### Control
 *Set your window mouse setting to the following before you do the in game changes below.*
 
-{{< figure src="https://terrancraft.files.wordpress.com/2016/12/mouse.jpg" title="Steve Francia" >}}
+{{< figure src="https://terrancraft.files.wordpress.com/2016/12/mouse.jpg" >}}
 
 ###### mouse
 
