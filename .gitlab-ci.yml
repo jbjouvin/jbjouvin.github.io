@@ -6,7 +6,7 @@ variables:
 
 pages:
   script:
-  - hugo
+  - hugo --channel=extended
   artifacts:
     paths:
     - public
