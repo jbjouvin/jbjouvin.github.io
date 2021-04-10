@@ -5,7 +5,7 @@ variables:
 
 pages:
   script:
-  - hugo --baseurl="https://jbjouvin.gitlab.io"
+  - hugo --baseurl "https://jbjouvin.gitlab.io"
   artifacts:
     paths:
     - public
