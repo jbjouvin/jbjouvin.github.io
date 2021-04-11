@@ -1,5 +1,5 @@
 +++
-title = "Gitlab et Github pages handling the same code"
+title = "🚧 Gitlab et Github pages handling the same code 🤓"
 description = "Simple Automation"
 date = "2021-04-11"
 +++
