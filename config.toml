@@ -1,3 +1,5 @@
+staticDir = "static"
+
 baseurl = "https://jbjouvin.gitlab.io"
 title = "jb"
 languagecode = "en"
