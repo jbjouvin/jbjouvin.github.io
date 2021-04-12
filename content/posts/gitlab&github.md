@@ -142,12 +142,6 @@ origin  git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git (fetch)
 origin  git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git (push)
 ```
 
-if everything is in place let's push to `github`
-
-```
-git push github
-```
-
 ### configure CI
 First of all we need to create a gh-pages on gitlab side, this in order to not break the CI when pushing without a gh-pages branch.
 
