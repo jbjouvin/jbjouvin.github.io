@@ -151,21 +151,25 @@ git push github
 ### configure CI
 
 We'll use the github actions.
+But we should commit those github action inside the gitlab repo.
 
-Simply create new dir and file inside the github repo, through the github UI
+So inside the gitlab repo aka master, create the following dir/file:
 
-{{< figure src="/images/ghactions.png" >}}
-And then 
-{{< figure src="/images/ghactions2.png" >}}
+```
+mkdir .github/workflows
+```
 
-and replace the `main.yml` with:
+```
+touch .github/workflows/gh-pages.yml
+```
+And inside the gh-pages.yml
 ```
 name: github pages
 
 on:
   push:
     branches:
-      - master  # Set a branch to deploy
+      - master
 
 jobs:
   deploy:
@@ -191,7 +195,16 @@ jobs:
           publish_dir: ./public
 ```
 
-and start Commit through the UI: {{< figure src="/images/ghactions3.png" >}}
+And commit
+
+```
+git add .
+git commit -m "add github CI"
+git push --all
+```
+
+As you can see, last command the push one, got the --all args.
+THis will push to gitlab + github.
 
 And that's it => [https://jbjouvin.github.io/](https://jbjouvin.github.io/)
 
@@ -201,7 +214,7 @@ Since you got 2 remote you'll need to push to those remote after commiting.
 
 you can do that simply with
 ```
-git remote | xargs -L1 git push --all
+git push --all
 ```
 
 Then, nothing more should be done and both CI will be triggered.
