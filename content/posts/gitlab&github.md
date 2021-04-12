@@ -149,8 +149,18 @@ git push github
 ```
 
 ### configure CI
+First of all we need to create a gh-pages on gitlab side, this in order to not break the CI when pushing without a gh-pages branch.
 
-We'll use the github actions.
+do do it.
+
+```
+git checkout --orphan gh-pages
+git rm --cached -r .
+git commit -m "new gh-pages branch" --allow-empty
+git push origin gh-pages
+```
+
+Then create the github CI file, we'll use the github actions.
 But we should commit those github action inside the gitlab repo.
 
 So inside the gitlab repo aka master, create the following dir/file:
