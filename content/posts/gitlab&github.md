@@ -203,8 +203,8 @@ git commit -m "add github CI"
 git push origin && git push github
 ```
 
-As you can see, last command the push one, got the --all args.
-THis will push to gitlab + github.
+As you can see, last command is in fact 2 commands. in order to push on gitlab + github.
+Some tricks can be made here to push with one command => [google](https://www.google.com)
 
 And that's it => [https://jbjouvin.github.io/](https://jbjouvin.github.io/)
 
@@ -216,6 +216,11 @@ you can do that simply with
 ```
 git push origin && git push github
 ```
+
+Also during my test, i face some issue on github where the pages config was put to none when pushing.
+To correct that, go into the settings of the github project pages and :
+
+{{< figure src="/images/ghpagesconfig.png" >}}
 
 Then, nothing more should be done and both CI will be triggered.
 
