@@ -7,10 +7,12 @@ date = "2021-04-11"
 - [Introduction](#introduction)
   - [Gitlab - Master](#gitlab---master)
     - [create our static website repo](#create-our-static-website-repo)
+    - [create gh-pages branch](#create-gh-pages-branch)
     - [add web stuff inside the repo](#add-web-stuff-inside-the-repo)
     - [configure CI](#configure-ci)
   - [Github - Mirror](#github---mirror)
     - [create our static website repo](#create-our-static-website-repo-1)
+    - [Branch configuration](#branch-configuration)
     - [Git mirror](#git-mirror)
     - [configure CI](#configure-ci-1)
 - [Conclusion](#conclusion)
@@ -48,6 +50,23 @@ git commit -m "add README"
 git push -u origin master
 ```
 
+### create gh-pages branch
+
+before going further we'll need to create a gh-pages branch on gitlab side, this in order to not break the CI when pushing without a gh-pages branch.
+
+Go then !
+
+```
+git checkout --orphan gh-pages
+git rm --cached -r .
+git commit -m "new gh-pages branch" --allow-empty
+git push origin gh-pages
+```
+
+go back to master
+```
+git checkout master
+```
 ### add web stuff inside the repo
 
 Ok, now let's add some code inside to have some static shit in there. 
@@ -107,10 +126,12 @@ git push
 
 and voila => [https://jbjouvin.gitlab.io](https://jbjouvin.gitlab.io)
 
+
 Now, let's handle github.
 
 ## Github - Mirror
 * create our static website repo
+* branch configuration
 * git mirror
 * configure CI
 
@@ -118,9 +139,24 @@ Now, let's handle github.
 
 {{< figure src="/images/ghrepocreation.png" >}}
 
+### Branch configuration
+
+After creation, create a branch called master. To be in phase with gitlab
+
+```
+echo "# jbjouvin.github.io" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin git@github.com:jbjouvin/jbjouvin.github.io.git
+git push -u origin master
+```
+
 ### Git mirror
 
-Main part of this is to trigger the mirroring
+Main part of this is to trigger the mirroring on gitlab side.
+So inside gitlab repo, simply launch
 
 ```
 git remote add --mirror=push github git@github.com:jbjouvin/jbjouvin.github.io.git
@@ -143,16 +179,6 @@ origin  git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git (push)
 ```
 
 ### configure CI
-First of all we need to create a gh-pages on gitlab side, this in order to not break the CI when pushing without a gh-pages branch.
-
-Go then !
-
-```
-git checkout --orphan gh-pages
-git rm --cached -r .
-git commit -m "new gh-pages branch" --allow-empty
-git push origin gh-pages
-```
 
 Then create the github CI file, we'll use the github actions.
 But we should commit those github action inside the gitlab repo.
@@ -173,7 +199,7 @@ name: github pages
 on:
   push:
     branches:
-      - gh-pages
+      - master
 
 jobs:
   deploy:
