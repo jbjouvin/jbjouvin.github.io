@@ -145,7 +145,7 @@ origin  git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git (push)
 ### configure CI
 First of all we need to create a gh-pages on gitlab side, this in order to not break the CI when pushing without a gh-pages branch.
 
-do do it.
+Go then !
 
 ```
 git checkout --orphan gh-pages
@@ -220,11 +220,6 @@ you can do that simply with
 ```
 git push origin && git push github
 ```
-
-Also during my test, i face some issue on github where the pages config was put to none when pushing.
-To correct that, go into the settings of the github project pages and :
-
-{{< figure src="/images/ghpagesconfig.png" >}}
 
 Then, nothing more should be done and both CI will be triggered.
 
