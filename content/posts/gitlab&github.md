@@ -169,7 +169,7 @@ name: github pages
 on:
   push:
     branches:
-      - master
+      - gh-pages
 
 jobs:
   deploy:
@@ -200,7 +200,7 @@ And commit
 ```
 git add .
 git commit -m "add github CI"
-git push --all
+git push origin && git push github
 ```
 
 As you can see, last command the push one, got the --all args.
@@ -214,7 +214,7 @@ Since you got 2 remote you'll need to push to those remote after commiting.
 
 you can do that simply with
 ```
-git push --all
+git push origin && git push github
 ```
 
 Then, nothing more should be done and both CI will be triggered.
