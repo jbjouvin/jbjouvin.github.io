@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="JB">
+    <meta name="description" content="vagrant">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vagrant"/>
+<meta name="twitter:description" content="vagrant"/>
+
+    <meta property="og:title" content="vagrant" />
+<meta property="og:description" content="vagrant" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jbjouvin.github.io/cheat-sheets/vagrant/" /><meta property="article:section" content="cheat-sheets" />
+<meta property="article:published_time" content="1979-01-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="1979-01-01T00:00:00&#43;00:00" />
+
+
+
+    
+      <base href="https://jbjouvin.github.io/cheat-sheets/vagrant/">
+    
+    <title>
+  vagrant · jb
+</title>
+
+    
+      <link rel="canonical" href="https://jbjouvin.github.io/cheat-sheets/vagrant/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder.min.034bcd843a08fabbe24f5742a0d7aa41767a109c90db1ad375b622cccc880bf8.css" integrity="sha256-A0vNhDoI&#43;rviT1dCoNeqQXZ6EJyQ2xrTdbYizMyIC/g=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.81.0" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-dark"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://jbjouvin.github.io/">
+      jb
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
+      </span>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/posts/">blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/cheat-sheets/">cheat-sheets</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/sc2tips/">Stracraft II</a>
+            </li>
+          
+        
+        
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>vagrant</h1>
+    </header>
+
+    <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">vagrant
+</code></pre></div><h4 id="exemple-de-conf-vagrantfile">Exemple de conf Vagrantfile:</h4>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The &#34;2&#34; in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don&#39;t change it unless you know what
+# you&#39;re doing.
+Vagrant.configure(&#34;2&#34;) do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  config.vm.box = &#34;ubuntu/xenial64&#34;
+
+  # Disable automatic box update checking. If you disable this, then
+  # boxes will only be checked for updates when the user runs
+  # `vagrant box outdated`. This is not recommended.
+  config.vm.box_check_update = false
+
+  # fsnotify
+  config.vm.synced_folder &#34;.&#34;, &#34;/vagrant&#34;, fsnotify: true
+
+  config.vm.provider &#34;virtualbox&#34; do |vb|
+    vb.name = &#34;default&#34;
+    # vb.gui = true
+    vb.cpus = 2
+    vb.memory = &#34;5120&#34;
+  end
+
+  # Port Main Application
+  config.vm.network &#34;forwarded_port&#34;, guest: 80, host: 80
+  
+  # Port docker Engine
+  config.vm.network &#34;forwarded_port&#34;, guest: 2375, host: 2375
+  
+  # Port Mongo
+  config.vm.network &#34;forwarded_port&#34;, guest: 27017, host: 27017
+  
+  # Ionic
+  # Ionic serve
+  config.vm.network &#34;forwarded_port&#34;, guest: 8100, host: 8100
+  # Ionic livereload
+  config.vm.network &#34;forwarded_port&#34;, guest: 35729, host: 35729
+  config.vm.network &#34;forwarded_port&#34;, guest: 53703, host: 53703
+  
+  # Port NodeJS
+  config.vm.network &#34;forwarded_port&#34;, guest: 8400, host: 8400
+
+  # Vagrant provision
+  # Docker container
+  config.vm.provision &#34;docker&#34; do |docker|
+    docker.pull_images &#39;mongo&#39;
+    docker.pull_images &#39;node&#39;
+  end
+
+  config.vm.provision &#34;shell&#34;, path: &#34;vagrant-provision/setup.sh&#34;
+
+end
+
+</code></pre></div>
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Why do we fall ? So we can learn to pick ourselves up</p>
+      
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+      
+      <script src="https://jbjouvin.github.io/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

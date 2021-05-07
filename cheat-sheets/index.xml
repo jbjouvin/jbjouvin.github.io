@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheat-sheets on jb</title>
+    <link>https://jbjouvin.github.io/cheat-sheets/</link>
+    <description>Recent content in Cheat-sheets on jb</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jan 1979 00:00:00 +0000</lastBuildDate><atom:link href="https://jbjouvin.github.io/cheat-sheets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ansible</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/ansible/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/ansible/</guid>
+      <description>Ex de playbook: --- - hosts: all become: yes tasks: # Docker Compose - name: Check Docker compose bin file presence stat: path=/usr/local/bin/docker-compose register: dockercompose - name: Install docker compose shell: curl -L https://github.com/docker/compose/releases/download/1.5.2/docker-compose-`uname -s`-`uname -m` &amp;gt; /usr/local/bin/docker-compose when: dockercompose.stat.exists == false - name: Apply executable permission file: path=/usr/local/bin/docker-compose mode=&amp;#34;u+x,g+x&amp;#34; - name: docker port ouverture =&amp;gt; kitematic conf command: echo DOCKER_OPTS=&amp;#34;-H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375&amp;#34; &amp;gt; /etc/default/docker # command: service docker restart - name: Enable i386 architecture command: dpkg --add-architecture i386 - name: Ensure apt cache is up to date apt: upgrade apt: update_cache=yes - name: Install unzip apt: name: unzip state: installed update_cache: true - name: Install Open JDK apt: name: openjdk-8-jdk command: chmod -R +x $JAVA_HOME </description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/docker/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/docker/</guid>
+      <description>Everything
+Commandes #container docker container ls docker container prune #images docker image ls -a docker image prune -a #sys docker system info docker system prune #network docker network ls Exemple de docker compose file version: &amp;#39;2.1&amp;#39; services: users-db: container_name: users-db build: context: ../usersTDDC/project/db # context: https://github.com/jbjouvin/usersTDDC.git#master:project/db ports: - 5435:5432 # expose ports - HOST:CONTAINER environment: - POSTGRES_USER=postgres - POSTGRES_PASSWORD=postgres healthcheck: test: exit 0 users-service: container_name: users-service build: context: ../usersTDDC dockerfile: Dockerfile-local # build: https://github.</description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/git/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/git/</guid>
+      <description>Git en 2-2 from buzut https://buzut.fr/git-en-2-2/
+Git immersion http://gitimmersion.com//</description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/python/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/python/</guid>
+      <description>os  import os pythonpath = os.envrion[&amp;#34;PYTHONPATH&amp;#34;] def save_game(self): &amp;#34;&amp;#34;&amp;#34; un fichier .sav est créé a chaque mouvement &amp;#34;&amp;#34;&amp;#34; chemin = os.path.join(&amp;#34;cartes&amp;#34;, self.nom + &amp;#34;sav&amp;#34;) with open(chemin, &amp;#39;w&amp;#39;) as fichier: fichier.write(self.labystr) if self.position[3] == &amp;#39;U&amp;#39;: os.remove(chemin)  math random shutil pickle sqlite3 csv json logging base64 venv timeit time  # Find execution time: import time start = time.time() &amp;#34;the code you want to test stays here&amp;#34; end = time.</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/shell/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/shell/</guid>
+      <description>grep + find, sed awk  The bible
+find The Geek Stuff – 15 Find Commands
+The Geek Stuff – 15 More Find Commands
+IBM – Advanced Find Techniques
+grep The Geek Stuff – 15 Grep Commands
+sed John Cook – Learn a little sed
+The Geek Stuff – Sed Tips and Tricks
+Bruce Barnett – Sed Tutorial and Introduction
+Famous sed one-liners explained
+awk Greg Grothaus – Why you should learn just a little awk</description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/sql/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/sql/</guid>
+      <description>select * from table where u &amp;gt; 1; mcd designer: http://ondras.zarovi.cz/sql/demo/
+sqlZoo, if you loose your mind !!!: http://sqlzoo.net/wiki/SQL_Tutorial</description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/terraform/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/terraform/</guid>
+      <description>terraform init plan deploy destroy Modules registry : https://registry.terraform.io/ </description>
+    </item>
+    
+    <item>
+      <title>vagrant</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/vagrant/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/vagrant/</guid>
+      <description>vagrant Exemple de conf Vagrantfile: # -*- mode: ruby -*- # vi: set ft=ruby : # All Vagrant configuration is done below. The &amp;#34;2&amp;#34; in Vagrant.configure # configures the configuration version (we support older styles for # backwards compatibility). Please don&amp;#39;t change it unless you know what # you&amp;#39;re doing. Vagrant.configure(&amp;#34;2&amp;#34;) do |config| # The most common configuration options are documented and commented below. # For a complete reference, please see the online documentation at # https://docs.</description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/vscode/</link>
+      <pubDate>Mon, 01 Jan 1979 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/vscode/</guid>
+      <description>Used Extensions  Dracula Python Prettier Material Icon Theme Go Path Intelisense Bracket Pair Colorized Vetur EditorConfig Indent Rainbow Polacode Settings Sync  </description>
+    </item>
+    
+    <item>
+      <title>byobu</title>
+      <link>https://jbjouvin.github.io/cheat-sheets/byobu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/cheat-sheets/byobu/</guid>
+      <description>What ? Byobu is a suite of enhancements to tmux, as a command line tool providing live system status, dynamic window management, and some convenient keybindings:
+sheet F1 * Used by X11 * Shift-F1 Display this help F2 Create a new window Shift-F2 Create a horizontal split Ctrl-F2 Create a vertical split Ctrl-Shift-F2 Create a new session F3/F4 Move focus among windows Alt-Left/Right Move focus among windows Alt-Up/Down Move focus among sessions Shift-Left/Right/Up/Down Move focus among splits Shift-F3/F4 Move focus among splits Ctrl-F3/F4 Move a split Ctrl-Shift-F3/F4 Move a window Shift-Alt-Left/Right/Up/Down Resize a split F5 Reload profile, refresh status Alt-F5 Toggle UTF-8 support, refresh status Shift-F5 Toggle through status lines Ctrl-F5 Reconnect ssh/gpg/dbus sockets Ctrl-Shift-F5 Change status bar&amp;#39;s color randomly F6 Detach session and then logout Shift-F6 Detach session and do not logout Alt-F6 Detach all clients but yourself Ctrl-F6 Kill split in focus F7 Enter scrollback history Alt-PageUp/PageDown Enter and move through scrollback Shift-F7 Save history to $BYOBU_RUN_DIR/printscreen F8 Rename the current window Ctrl-F8 Rename the current session Shift-F8 Toggle through split arrangements Alt-Shift-F8 Restore a split-pane layout Ctrl-Shift-F8 Save the current split-pane layout F9 Launch byobu-config window Ctrl-F9 Enter command and run in all windows Shift-F9 Enter command and run in all splits Alt-F9 Toggle sending keyboard input to all splits F10 * Used by X11 * F11 * Used by X11 * Alt-F11 Expand split to a full window Shift-F11 Zoom into a split, zoom out of a split Ctrl-F11 Join window into a vertical split F12 Escape sequence Shift-F12 Toggle on/off Byobu&amp;#39;s keybindings Alt-F12 Toggle on/off Byobu&amp;#39;s mouse support Ctrl-Shift-F12 Mondrian squares official site: http://byobu.</description>
+    </item>
+    
+  </channel>
+</rss>

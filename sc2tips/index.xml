@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sc2tips on jb</title>
+    <link>https://jbjouvin.github.io/sc2tips/</link>
+    <description>Recent content in Sc2tips on jb</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jbjouvin.github.io/sc2tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SC2 Hybrid Settings - 🛠️</title>
+      <link>https://jbjouvin.github.io/sc2tips/sc2hybrydsettings/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/sc2tips/sc2hybrydsettings/</guid>
+      <description>Hybrid Settings can be found here: hybridSettings</description>
+    </item>
+    
+    <item>
+      <title>SC2 params - 👾</title>
+      <link>https://jbjouvin.github.io/sc2tips/sc2params/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jbjouvin.github.io/sc2tips/sc2params/</guid>
+      <description>sc2 params thanks to: www.TerranCraft.com
+ Graphics Graphics and Textures: Sound Control - mouse Gameplay  Graphics  Display mode: Fullscreen Resolution: 1920 x 1080 Vertical syn: Disable Refresh rate: Default Reduced violence: Enable  Graphics and Textures:  High for models Medium for shaders, shadows and effects Low for everything else  Sound  Music: Disable Ambient sound: Disable Move sound: 100% Sound quality: Low Voices sound: Enable Error sound: Enable  Control Set your window mouse setting to the following before you do the in game changes below.</description>
+    </item>
+    
+  </channel>
+</rss>

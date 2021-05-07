@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="JB">
+    <meta name="description" content="Shell">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shell"/>
+<meta name="twitter:description" content="Shell"/>
+
+    <meta property="og:title" content="Shell" />
+<meta property="og:description" content="Shell" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jbjouvin.github.io/cheat-sheets/shell/" /><meta property="article:section" content="cheat-sheets" />
+<meta property="article:published_time" content="1979-01-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="1979-01-01T00:00:00&#43;00:00" />
+
+
+
+    
+      <base href="https://jbjouvin.github.io/cheat-sheets/shell/">
+    
+    <title>
+  Shell · jb
+</title>
+
+    
+      <link rel="canonical" href="https://jbjouvin.github.io/cheat-sheets/shell/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder.min.034bcd843a08fabbe24f5742a0d7aa41767a109c90db1ad375b622cccc880bf8.css" integrity="sha256-A0vNhDoI&#43;rviT1dCoNeqQXZ6EJyQ2xrTdbYizMyIC/g=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.81.0" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-dark"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://jbjouvin.github.io/">
+      jb
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
+      </span>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/posts/">blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/cheat-sheets/">cheat-sheets</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/sc2tips/">Stracraft II</a>
+            </li>
+          
+        
+        
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container page">
+  <article>
+    <header>
+      <h1>Shell</h1>
+    </header>
+
+    <!-- raw HTML omitted -->
+<ul>
+<li>grep + find, sed awk</li>
+</ul>
+<p><a href="https://wilsonericn.wordpress.com/2011/08/25/find-grep-sed-and-awk/amp/">The bible</a></p>
+<h2 id="find">find</h2>
+<p><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">The Geek Stuff – 15 Find Commands</a></p>
+<p><a href="http://www.thegeekstuff.com/2009/06/15-practical-unix-linux-find-command-examples-part-2/">The Geek Stuff – 15 More Find Commands</a></p>
+<p><a href="http://www.ibm.com/developerworks/aix/library/au-unix-find.html">IBM – Advanced Find Techniques</a></p>
+<h2 id="grep">grep</h2>
+<p><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">The Geek Stuff – 15 Grep Commands</a></p>
+<h2 id="sed">sed</h2>
+<p><a href="http://www.johndcook.com/blog/2011/04/19/learn-one-sed-command/">John Cook – Learn a little sed</a></p>
+<p><a href="http://www.thegeekstuff.com/tag/sed-tips-and-tricks/">The Geek Stuff – Sed Tips and Tricks</a></p>
+<p><a href="http://www.grymoire.com/Unix/Sed.html">Bruce Barnett – Sed Tutorial and Introduction</a></p>
+<p><a href="http://www.catonmat.net/blog/sed-one-liners-explained-part-one/">Famous sed one-liners explained</a></p>
+<h2 id="awk">awk</h2>
+<p><a href="http://gregable.com/2010/09/why-you-should-know-just-little-awk.html">Greg Grothaus – Why you should learn just a little awk</a></p>
+<p><a href="http://www.thegeekstuff.com/2010/01/8-powerful-awk-built-in-variables-fs-ofs-rs-ors-nr-nf-filename-fnr/">The Geek Stuff – 8 Powerful Awk Built-in Variables</a></p>
+<p><a href="http://www.troubleshooters.com/codecorn/awk/index.htm">Steve’s awk academy</a></p>
+<p><a href="http://www.grymoire.com/Unix/Awk.html">Bruce Barnett – Awk Tutorial and Introduction</a></p>
+<p><a href="http://www.hcs.harvard.edu/~dholland/computers/awk.html">Simple awk tutorial</a></p>
+<p><a href="http://www.catonmat.net/blog/awk-one-liners-explained-part-one/">Famous awk one-liners explained</a></p>
+<h2 id="motivationphilospophy">Motivation/Philospophy:</h2>
+<p>John Cook on <a href="http://www.johndcook.com/blog/2010/09/29/a-little-awk/">Greg Grothaus on awk</a></p>
+<h2 id="general-command-line-introduction">General command-line introduction:</h2>
+<p><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">The Geek Stuff – 50 Linux Commands</a></p>
+<ul>
+<li>cut</li>
+<li>vmstat</li>
+<li>uptime</li>
+</ul>
+
+  </article>
+</section>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Why do we fall ? So we can learn to pick ourselves up</p>
+      
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+      
+      <script src="https://jbjouvin.github.io/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="JB">
+    <meta name="description" content="Simple Automation">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="🚧 Gitlab et Github pages handling the same code 🤓"/>
+<meta name="twitter:description" content="Simple Automation"/>
+
+    <meta property="og:title" content="🚧 Gitlab et Github pages handling the same code 🤓" />
+<meta property="og:description" content="Simple Automation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jbjouvin.github.io/posts/gitlabgithub/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-04-11T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-04-11T00:00:00&#43;00:00" />
+
+
+
+    
+      <base href="https://jbjouvin.github.io/posts/gitlabgithub/">
+    
+    <title>
+🚧 Gitlab et Github pages handling the same code 🤓 · jb
+</title>
+
+    
+      <link rel="canonical" href="https://jbjouvin.github.io/posts/gitlabgithub/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder.min.034bcd843a08fabbe24f5742a0d7aa41767a109c90db1ad375b622cccc880bf8.css" integrity="sha256-A0vNhDoI&#43;rviT1dCoNeqQXZ6EJyQ2xrTdbYizMyIC/g=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.81.0" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-dark"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://jbjouvin.github.io/">
+      jb
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
+      </span>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/posts/">blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/cheat-sheets/">cheat-sheets</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/sc2tips/">Stracraft II</a>
+            </li>
+          
+        
+        
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+<section class="container post">
+  <article>
+    <header>
+      <div class="post-title">
+        <h1 class="title">🚧 Gitlab et Github pages handling the same code 🤓</h1>
+      </div>
+      <div class="post-meta">
+        <div class="date">
+          <span class="reading-time">
+            <i class="fas fa-clock"></i>
+            4-minute read
+          </span>
+        </div>
+        
+        
+      </div>
+    </header>
+    <div>
+      
+      <ul>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#gitlab---master">Gitlab - Master</a>
+<ul>
+<li><a href="#create-our-static-website-repo">create our static website repo</a></li>
+<li><a href="#create-gh-pages-branch">create gh-pages branch</a></li>
+<li><a href="#add-web-stuff-inside-the-repo">add web stuff inside the repo</a></li>
+<li><a href="#configure-ci">configure CI</a></li>
+</ul>
+</li>
+<li><a href="#github---mirror">Github - Mirror</a>
+<ul>
+<li><a href="#create-our-static-website-repo-1">create our static website repo</a></li>
+<li><a href="#branch-configuration">Branch configuration</a></li>
+<li><a href="#git-mirror">Git mirror</a></li>
+<li><a href="#configure-ci-1">configure CI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h1 id="introduction">Introduction</h1>
+<p>Hello,</p>
+<p>This small blog is as you may know hosted by github page or gitlab pages, it depends where you are :)</p>
+<p>Gonna tell you a small trick to have your static website hosted on github + gitlab, with the same source code.</p>
+<p>Why ? If one fall of course ! :D
+And also because it&rsquo;s fun, at least i think it&rsquo;s fun :)</p>
+<h2 id="gitlab---master">Gitlab - Master</h2>
+<ul>
+<li>create our static website repo</li>
+<li>add web stuff inside the repo</li>
+<li>configure CI</li>
+</ul>
+<h3 id="create-our-static-website-repo">create our static website repo</h3>
+<p>let&rsquo;s pretend our repo name is <code>jbjouvin.gitlab.io</code> and it&rsquo;s a <a href="https://gohugo.io/">hugo</a> static website.
+Let&rsquo;s create it and make it public</p>
+<figure>
+    <img src="https://jbjouvin.github.io/images/glrepocreation.png"/> 
+</figure>
+
+<p>then the usual stuff:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git clone git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git
+cd jbjouvin.gitlab.io
+touch README.md
+git add README.md
+git commit -m &#34;add README&#34;
+git push -u origin master
+</code></pre></div><h3 id="create-gh-pages-branch">create gh-pages branch</h3>
+<p>before going further we&rsquo;ll need to create a gh-pages branch on gitlab side, this in order to not break the CI when pushing without a gh-pages branch.</p>
+<p>Go then !</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git checkout --orphan gh-pages
+git rm --cached -r .
+git commit -m &#34;new gh-pages branch&#34; --allow-empty
+git push origin gh-pages
+</code></pre></div><p>go back to master</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git checkout master
+</code></pre></div><h3 id="add-web-stuff-inside-the-repo">add web stuff inside the repo</h3>
+<p>Ok, now let&rsquo;s add some code inside to have some static shit in there.</p>
+<ul>
+<li>Install <a href="https://gohugo.io/getting-started/quick-start/">hugo</a></li>
+<li>Create new site</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo new site --force . 
+</code></pre></div><ul>
+<li>Install a theme</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</code></pre></div><ul>
+<li>add the theme, name and remove baseURL to the conf file</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">echo $&#39;languageCode = \&#34;en-us\&#34;\ntitle = \&#34;jbjouvin.gitlab.io\&#34;\ntheme = \&#34;ananke\&#34;&#39; &gt; config.toml
+</code></pre></div><ul>
+<li>Start the server to verify if everythin goes ok</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">hugo server
+</code></pre></div><ul>
+<li>Commit</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;add basic hugo&#34;
+git push
+</code></pre></div><h3 id="configure-ci">configure CI</h3>
+<p>Complicated !</p>
+<p>Just add one more file to the repo&hellip;</p>
+<p>.gitlab-ci.yml</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">image: registry.gitlab.com/pages/hugo:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+pages:
+  script:
+  - hugo -b &#34;https://jbjouvin.gitlab.io&#34;
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+</code></pre></div><ul>
+<li>Commit</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;add basic hugo&#34;
+git push
+</code></pre></div><p>and voila =&gt; <a href="https://jbjouvin.gitlab.io">https://jbjouvin.gitlab.io</a></p>
+<p>Now, let&rsquo;s handle github.</p>
+<h2 id="github---mirror">Github - Mirror</h2>
+<ul>
+<li>create our static website repo</li>
+<li>branch configuration</li>
+<li>git mirror</li>
+<li>configure CI</li>
+</ul>
+<h3 id="create-our-static-website-repo-1">create our static website repo</h3>
+<figure>
+    <img src="https://jbjouvin.github.io/images/ghrepocreation.png"/> 
+</figure>
+
+<h3 id="branch-configuration">Branch configuration</h3>
+<p>After creation, create a branch called master. To be in phase with gitlab</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">echo &#34;# jbjouvin.github.io&#34; &gt;&gt; README.md
+git init
+git add README.md
+git commit -m &#34;first commit&#34;
+git branch -M master
+git remote add origin git@github.com:jbjouvin/jbjouvin.github.io.git
+git push -u origin master
+</code></pre></div><h3 id="git-mirror">Git mirror</h3>
+<p>Main part of this is to trigger the mirroring on gitlab side.
+So inside gitlab repo, simply launch</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote add --mirror=push github git@github.com:jbjouvin/jbjouvin.github.io.git
+</code></pre></div><p>So, we add a remote, and say it&rsquo;s a mirror (&ndash;mirror) and we name it github.</p>
+<p>Verify</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git remote -v
+</code></pre></div><p>you should have something like:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">github  git@github.com:jbjouvin/jbjouvin.github.io.git (fetch)
+github  git@github.com:jbjouvin/jbjouvin.github.io.git (push)
+origin  git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git (fetch)
+origin  git@gitlab.com:jbjouvin/jbjouvin.gitlab.io.git (push)
+</code></pre></div><h3 id="configure-ci-1">configure CI</h3>
+<p>Then create the github CI file, we&rsquo;ll use the github actions.
+But we should commit those github action inside the gitlab repo.</p>
+<p>So inside the gitlab repo aka master, create the following dir/file:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mkdir .github/workflows
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">touch .github/workflows/gh-pages.yml
+</code></pre></div><p>And inside the gh-pages.yml</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: &#39;0.81.0&#39;
+
+      - name: Build
+        run: hugo -b &#34;https://jbjouvin.github.io&#34;
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+</code></pre></div><p>And commit</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git add .
+git commit -m &#34;add github CI&#34;
+git push origin &amp;&amp; git push github
+</code></pre></div><p>As you can see, last command is in fact 2 commands. in order to push on gitlab + github.
+Some tricks can be made here to push with one command =&gt; <a href="https://www.google.com">google</a></p>
+<p>And that&rsquo;s it =&gt; <a href="https://jbjouvin.github.io/">https://jbjouvin.github.io/</a></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Since you got 2 remote you&rsquo;ll need to push to those remote after commiting.</p>
+<p>you can do that simply with</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git push origin &amp;&amp; git push github
+</code></pre></div><p>Then, nothing more should be done and both CI will be triggered.</p>
+<p>See you !</p>
+<p>JB</p>
+
+    </div>
+
+
+    <footer>
+
+    </footer>
+  </article>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Why do we fall ? So we can learn to pick ourselves up</p>
+      
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+      
+      <script src="https://jbjouvin.github.io/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>

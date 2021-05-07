@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+
+    <meta name="author" content="JB">
+    <meta name="description" content="Handling two Git accounts">
+    <meta name="keywords" content="blog,developer,personal">
+
+    
+      <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GiTips 👨‍💻"/>
+<meta name="twitter:description" content="Handling two Git accounts"/>
+
+    <meta property="og:title" content="GiTips 👨‍💻" />
+<meta property="og:description" content="Handling two Git accounts" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jbjouvin.github.io/posts/gittwoaccountsalias/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-05-09T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2019-05-09T00:00:00&#43;00:00" />
+
+
+
+    
+      <base href="https://jbjouvin.github.io/posts/gittwoaccountsalias/">
+    
+    <title>
+GiTips 👨‍💻 · jb
+</title>
+
+    
+      <link rel="canonical" href="https://jbjouvin.github.io/posts/gittwoaccountsalias/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder.min.034bcd843a08fabbe24f5742a0d7aa41767a109c90db1ad375b622cccc880bf8.css" integrity="sha256-A0vNhDoI&#43;rviT1dCoNeqQXZ6EJyQ2xrTdbYizMyIC/g=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://jbjouvin.github.io/css/coder-dark.min.717236c74e0a5208ef73964a9f44c6b443b689a95b270d8b2a40d0c012460dac.css" integrity="sha256-cXI2x04KUgjvc5ZKn0TGtEO2ialbJw2LKkDQwBJGDaw=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://jbjouvin.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.81.0" />
+  </head>
+  
+  
+  
+    
+  
+  <body class="colorscheme-dark"
+        onload=" twemoji.parse(document.body); "
+  >
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://jbjouvin.github.io/">
+      jb
+    </a>
+    
+      <span id="dark-mode-toggle" class="float-right">
+        <i class="fas fa-adjust fa-fw"></i>
+      </span>
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fas fa-bars fa-fw"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/posts/">blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/cheat-sheets/">cheat-sheets</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="https://jbjouvin.github.io/sc2tips/">Stracraft II</a>
+            </li>
+          
+        
+        
+        <li class="navigation-item separator">
+          <span>|</span>
+        </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+<section class="container post">
+  <article>
+    <header>
+      <div class="post-title">
+        <h1 class="title">GiTips 👨‍💻</h1>
+      </div>
+      <div class="post-meta">
+        <div class="date">
+          <span class="reading-time">
+            <i class="fas fa-clock"></i>
+            2-minute read
+          </span>
+        </div>
+        
+        
+      </div>
+    </header>
+    <div>
+      
+      <p>Hello,</p>
+<p>Recently, I was faced with a problem.
+How to manage two git accounts on the same computer?
+I explain myself, a &ldquo;<code>personal</code>&rdquo; account and a &ldquo;<code>work</code>&rdquo; account, on the same computer.
+Yes, I know that working on personal things with work materials is a bad habit &hellip; but that&rsquo;s another question.</p>
+<p>So, to get rid of just that (I did not invent anything, there are a lot of tutorials on the web), you will need to create a separate directory.
+One for work, one for the person.</p>
+<p>Regarding git, you will have to manage your \ $ HOME .gitconfig like this:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[includeIf <span style="color:#0ff;font-weight:bold">&#34;gitdir:~/perso/&#34;</span>]
+    path = ~/perso/.gitconfig
+
+[includeIf <span style="color:#0ff;font-weight:bold">&#34;gitdir:~/work/&#34;</span>]
+    path = ~/work/.gitconfig
+
+[user]
+</code></pre></div><p>So as you see, <strong>[user]</strong> is not define. So you&rsquo;ll have to define it in <strong>another</strong> <code>.gitconfig</code>.
+So in each directory, create a <code>.gitconfig</code></p>
+<p>in the <code>/perso</code> directory:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[user]
+   email = perso@perso.com
+   name = name
+</code></pre></div><p>in the <code>/work</code> directory:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[user]
+   email = work@work.com
+   name = name
+</code></pre></div><p>And that&rsquo;s it. Each time you&rsquo;ll go into the folder, your &ldquo;<code>git user</code>&rdquo; will change.</p>
+<h3 id="bonus">Bonus</h3>
+<p>Here is my git alias for log:</p>
+<p>yes there is 3, 3 differents view.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">[alias]
+    lg1 = log --pretty=format:<span style="color:#0ff;font-weight:bold">&#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&#34;</span> --decorate
+    lg2 = log --pretty=format:<span style="color:#0ff;font-weight:bold">&#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&#34;</span> --decorate --numstat
+    l = log --graph --pretty=tformat:<span style="color:#0ff;font-weight:bold">&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset&#39;</span> --abbrev-commit --date=relative
+</code></pre></div><p><strong>See you !</strong></p>
+<hr>
+
+    </div>
+
+
+    <footer>
+
+    </footer>
+  </article>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+</section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Why do we fall ? So we can learn to pick ourselves up</p>
+      
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+      
+      <script src="https://jbjouvin.github.io/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+  </body>
+
+</html>
